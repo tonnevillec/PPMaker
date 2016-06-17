@@ -1,3 +1,9 @@
-app:
-    resource: "@AppBundle/Controller/"
+pp_maker_back:
+    resource: "@PPMakerBackBundle/Controller/"
     type:     annotation
+    prefix:   /admin
+
+pp_maker_front:
+    resource: "@PPMakerFrontBundle/Controller/"
+    type:     annotation
+    prefix:   /
