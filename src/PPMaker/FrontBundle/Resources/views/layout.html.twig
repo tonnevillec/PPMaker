@@ -8,7 +8,7 @@
     <title>PPMaker{% block title %}{% endblock %}</title>
 
     {% stylesheets filter='cssrewrite'
-    'bundles/front/css/*' %}
+    '@PPMakerFrontBundle/Resources/public/css/*' %}
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
 
@@ -18,8 +18,8 @@
     <![endif]-->
 </head>
 <body class="{% block body_class %}{% endblock %}">
-{% block nav %}
-{% endblock %}
+
+{% include "PPMakerFrontBundle::navbar.html.twig" %}
 
 <div class="container-fluid">
     {% block body %}
@@ -27,14 +27,8 @@
 </div>
 
 {% javascripts
-'bundles/front/js/*' %}
+'@PPMakerFrontBundle/Resources/public/js/*' %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-
-    });
-</script>
 {% endjavascripts %}
 
 {% block others_js %}
