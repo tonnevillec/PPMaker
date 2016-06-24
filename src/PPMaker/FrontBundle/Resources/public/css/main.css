@@ -1,0 +1,18 @@
+body {
+    padding-top: 70px;
+}
+
+.bgDark {
+    background-color: #000;
+    color: #fff;
+}
+
+.bgYellow {
+    background-color: #f1c40f;
+    color: #000;
+}
+
+.bgWhite {
+    background-color: #fff;
+    color: #000;
+}
