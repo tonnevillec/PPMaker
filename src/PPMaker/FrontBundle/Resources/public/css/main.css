@@ -21,18 +21,21 @@ body {
     border-bottom: none !important;
 }
 
+.panel-heading{
+    padding: 1px 15px !important;
+}
+
 /* recup */
 a, a:hover, a:focus, a:active, a.active {
     outline: 0;
     color: #fff
 }
-
+/*
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700
+    font-weight: 600
 }
-
+*/
 
 .floating-label-form-group {
     position: relative;
