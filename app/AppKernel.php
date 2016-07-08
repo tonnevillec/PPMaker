@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new PPMaker\FrontBundle\PPMakerFrontBundle(),
             new PPMaker\BackBundle\PPMakerBackBundle(),
+            new \FOS\UserBundle\FOSUserBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
