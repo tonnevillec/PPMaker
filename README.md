@@ -1,4 +1,8 @@
 PPMaker
 =======
 
-A Symfony project created on June 16, 2016, 8:07 pm.
+- composer update
+- creation BDD
+- php app/console do:sc:up --force
+- php app/console fos:user:create
+- php app/console fos:user:promote {username} ROLE_ADMIN
