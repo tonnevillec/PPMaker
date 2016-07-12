@@ -1,0 +1,19 @@
+last_update: dernière mise à jour
+administration: administration
+propulsed_by: propulsé par
+
+section:
+    follow_me: Suivez moi
+    like: j'aime
+    contact: contactez-moi
+    portfolio: mes réalisations
+    efficiencies: mes compétences
+    about_me: a propos de moi
+
+btn:
+    send: envoyer
+
+contact:
+    name: nom
+    email: adresse email
+    message: message
