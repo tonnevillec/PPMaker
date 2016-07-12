@@ -29,11 +29,17 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    translator: { fallback: "%locale%" }
 
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        brand_name: "%brand_name%"
+        brand_url: "%brand_url%"
+        brand_admin_email: "%brand_admin_email%"
+        brand_version: "%brand_version%"
 
 # Assetic Configuration
 assetic:

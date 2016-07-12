@@ -17,3 +17,9 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # PPMaker params
+    brand_name: PPMaker
+    brand_url: 'http://www.ppmaker.com'
+    brand_admin_email: 'tonnevillec@gmail.com'
+    brand_version: v1.0
