@@ -8,7 +8,8 @@
     <title>{{ brand_name }}{% block title %} - ADMINISTRATION{% endblock %}</title>
 
     {% stylesheets filter='cssrewrite'
-    '@PPMakerFrontBundle/Resources/public/css/*'
+    '@PPMakerFrontBundle/Resources/public/css/bootstrap.min.css'
+    '@PPMakerFrontBundle/Resources/public/css/font-awesome.min.css'
     '@PPMakerBackBundle/Resources/public/css/*'%}
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
     {% endstylesheets %}
@@ -20,32 +21,32 @@
 </head>
 <body class="{% block body_class %}back{% endblock %}">
 {% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar" id="navigation">
-                {% include "PPMakerBackBundle:Admin:navbar.html.twig" %}
-            </div>
+    <div id="wrapper">
+        {% block navbar_top %}
+            {% include "PPMakerBackBundle:Admin:navbar_top.html.twig" %}
+        {% endblock %}
 
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                {% block body_content %}{% endblock %}
-            </div>
-        </div>
+        {% block navbar_left %}
+            {% include "PPMakerBackBundle:Admin:navbar_left.html.twig" %}
+        {% endblock %}
+
+        {% block body_content %}
+        {% endblock %}
     </div>
+
+    {% block footer %}
+        {% include "PPMakerBackBundle:Admin:footer.html.twig" %}
+    {% endblock %}
 {% endblock %}
 
 {% javascripts
-'@PPMakerFrontBundle/Resources/public/js/*' %}
+'@PPMakerFrontBundle/Resources/public/js/*'
+'@PPMakerBackBundle/Resources/public/js/*'
+%}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
 
 {% block others_js %}
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('[data-toggle="offcanvas"]').click(function () {
-                $("#navigation").toggleClass("hidden-xs");
-            });
-        });
-    </script>
 {% endblock %}
 </body>
 </html>
