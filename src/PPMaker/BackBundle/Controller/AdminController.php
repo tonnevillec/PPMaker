@@ -5,7 +5,7 @@ namespace PPMaker\BackBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-//use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class AdminController extends Controller
 {
@@ -15,10 +15,10 @@ class AdminController extends Controller
      */
     public function indexAction()
     {
-        //$authCheck = $this->get('security.authorization_checker');
-        //if ($authCheck->isGranted('ROLE_ADMIN')) {
-            //return $this->redirect($this->generateUrl('back_admin'));
-        //}
+        $authCheck = $this->get('security.authorization_checker');
+        if ($authCheck->isGranted('ROLE_ADMIN')) {
+            return $this->redirect($this->generateUrl('back_admin'));
+        }
         return $this->redirect($this->generateUrl('back_login'));
     }
 
