@@ -1,95 +1,158 @@
-/*
- * Global add-ons
- */
+/*=============================================================
+    Authour URI: www.binarycart.com
+    License: Commons Attribution 3.0
 
-.sub-header {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    http://creativecommons.org/licenses/by/3.0/
+
+========================================================  */
+/*==============================================
+    GENERAL  STYLES    
+    =============================================*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
 }
 
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
-.navbar-fixed-top {
-    border: 0;
+#wrapper {
+    width: 100%;
+    margin-top: 35px;
 }
 
-/*
- * Sidebar
- */
-
-/* Hide for mobile, show later */
-.sidebar {
-    display: none;
-}
-@media (min-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1000;
-        display: block;
-        padding: 20px;
-        overflow-x: hidden;
-        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-        background-color: #f5f5f5;
-        border-right: 1px solid #eee;
-    }
+#page-wrapper {
+    padding: 15px 15px;
+    min-height: 600px;
+    background: #F3F3F3;
 }
 
-/* Sidebar navigation */
-.nav-sidebar {
-    margin-right: -21px; /* 20px padding + 1px border */
-    margin-bottom: 20px;
-    margin-left: -20px;
+#page-inner {
+    width: 100%;
+    margin: 10px 20px 10px 0px;
+    background-color: #fff !important;
+    padding: 10px;
+    min-height: 1050px;
 }
-.nav-sidebar > li > a {
-    padding-right: 20px;
+
+.pad-top {
+    padding-top: 15px;
+}
+
+/*==============================================
+    MENU STYLES    
+=============================================*/
+
+.sidebar-collapse .nav {
+    padding: 0;
+    padding-top: 50px;
+}
+
+.sidebar-collapse > .nav > li > a {
+    padding: 15px 10px;
+    color: #214761;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.sidebar-collapse > .nav > li {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.sidebar-collapse .nav > li > a:hover,
+.sidebar-collapse .nav > li > a:focus {
+    background: #F3F3F3;
+    outline: 0;
+}
+
+.navbar-side {
+    border: none;
+    background-color: #fff;
+}
+
+.navbar-inverse {
+    background-color: #214761;
+    border-color: #F0F0F0;
+    min-height: 50px;
+}
+
+.nav > li > a > i {
+    margin-right: 10px;
+}
+
+.logout-spn {
+    float: right;
+    color: #fff;
+    /*font-size: 25px;*/
+    /*font-weight: 800;*/
+    margin: 20px;
+    margin: 10px 25px 10px 50px;
+}
+
+.logout-spn a {
+    text-decoration: none;
+    color: #9d9d9d;
+}
+
+.logout-spn a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active-link {
+    background-color: #f3f3f3;
+}
+
+/*==============================================
+    DASHBOARD STYLES    
+=============================================*/
+.div-square {
+    padding: 5px;
+    border: 3px double #e1e1e1;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin: 5px;
+
+}
+
+.div-square > a, .div-square > a:hover {
+    color: #808080;
+    text-decoration: none;
+}
+
+/*==============================================
+    FOOTER STYLES     
+=============================================*/
+.footer {
+    background-color: #214761;
+    width: 100%;
+    color: #fff;
+    padding: 20px 50px 20px 50px;
     padding-left: 20px;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
+
+.footer > a, .footer > a:hover {
+
     color: #fff;
-    background-color: #428bca;
 }
 
+/*==============================================
+    MEDIA QUERIES     
+=============================================*/
 
-/*
- * Main content
- */
-
-.main {
-    padding: 20px;
-}
 @media (min-width: 768px) {
-    .main {
-        padding-right: 40px;
-        padding-left: 40px;
+    #page-wrapper {
+        margin: 0 0 0 260px;
+        padding: 15px 30px;
+        min-height: 1050px;
+
     }
-}
-.main .page-header {
-    margin-top: 0;
+
+    .navbar-side {
+        z-index: 1;
+        position: absolute;
+        width: 260px;
+
+    }
+
 }
 
 
-/*
- * Placeholder dashboard ideas
- */
-
-.placeholders {
-    margin-bottom: 30px;
-    text-align: center;
-}
-.placeholders h4 {
-    margin-bottom: 0;
-}
-.placeholder {
-    margin-bottom: 20px;
-}
-.placeholder img {
-    display: inline-block;
-    border-radius: 50%;
-}
