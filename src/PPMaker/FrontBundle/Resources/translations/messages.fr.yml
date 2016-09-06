@@ -4,6 +4,9 @@ propulsed_by: propulsé par
 
 welcome: bonjour
 dashboard: tableau de bord
+parameters: paramètres
+sections: sections
+logout: déconnexion
 
 section:
     follow_me: Suivez moi

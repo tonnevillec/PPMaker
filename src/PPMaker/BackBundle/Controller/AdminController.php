@@ -34,6 +34,17 @@ class AdminController extends Controller
     }
 
     /**
+     * @Route("/parameters", name="back_parameters")
+     * @Template("PPMakerBackBundle:Admin:parameters.html.twig")
+     */
+    public function parametersAdminAction()
+    {
+        // A ajouter avant pubf
+        //* @Security("has_role('ROLE_ADMIN')")
+        return ;
+    }
+
+    /**
      * @Route("/login", name="back_login")
      * @Template("PPMakerBackBundle:Admin:login.html.twig")
      */

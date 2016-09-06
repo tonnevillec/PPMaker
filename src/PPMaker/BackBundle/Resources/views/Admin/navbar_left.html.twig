@@ -1,19 +1,24 @@
 <nav class="navbar-default navbar-side" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
-            <li class="active-link">
-                <a href="index.html">
-                    <i class="fa fa-qrcode "></i> {{ 'dashboard'|trans|upper }}
+            <li class="{% if app.request.attributes.get('_route') == 'back_admin' %}active-link{% endif %}">
+                <a href="{{ path('back_home') }}">
+                    <i class="fa fa-qrcode "></i> {{ 'dashboard'|trans|capitalize }}
                 </a>
             </li>
-            <li>
-                <a href="ui.html">
-                    <i class="fa fa-table "></i> UI Elements
+            <li class="{% if app.request.attributes.get('_route') == 'back_parameters' %}active-link{% endif %}">
+                <a href="{{ path('back_parameters') }}">
+                    <i class="fa fa-table "></i> {{ 'parameters'|trans|capitalize }}
                 </a>
             </li>
-            <li>
+            <li class="{% if app.request.attributes.get('_route') == 'back_section' %}active-link{% endif %}">
                 <a href="blank.html">
-                    <i class="fa fa-edit "></i> Blank Page
+                    <i class="fa fa-edit "></i> {{ 'sections'|trans|capitalize }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('fos_user_security_logout') }}">
+                    <i class="fa fa-unlock-alt"></i> {{ 'logout'|trans|capitalize }}
                 </a>
             </li>
         </ul>

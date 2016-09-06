@@ -30,8 +30,12 @@
             {% include "PPMakerBackBundle:Admin:navbar_left.html.twig" %}
         {% endblock %}
 
-        {% block body_content %}
-        {% endblock %}
+        <div id="page-wrapper">
+            <div id="page-inner">
+            {% block body_content %}
+            {% endblock %}
+            </div>
+        </div>
     </div>
 
     {% block footer %}
