@@ -18,8 +18,18 @@ section:
 
 btn:
     send: envoyer
+    login: connexion
+    close: fermer
+    cancel: annuler
 
 contact:
     name: nom
     email: adresse email
     message: message
+
+login:
+    username: login
+    password: mot de passe
+    email: adresse mail
+    rememberMe: se souvenir de moi
+    forgotPassword: mot de passe oublié?

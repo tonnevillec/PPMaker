@@ -16,19 +16,15 @@
 
         {% include "PPMakerUserBundle:Security:login_content.html.twig" %}
     {% endblock fos_user_content %}
-
 {% endblock %}
 
 {% block others_js %}
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.forgot-pass').click(function(event) {
-                $(".pr-wrap").toggleClass("show-pass-reset");
-            });
-
-            $('.pass-reset-submit').click(function(event) {
-                $(".pr-wrap").removeClass("show-pass-reset");
-            });
-        });
+    <script>
+//        $("body").delegate(".btnSaveModal", "click", function(){
+//            var tog = $(this).data('toggle');
+//            $("#"+tog).prop('value', $("#changeTitle_"+tog).val());
+//            $("#text_"+tog).html($("#changeTitle_"+tog).val());
+//            $("#modal_"+tog).modal('hide');
+//        });
     </script>
 {% endblock %}
