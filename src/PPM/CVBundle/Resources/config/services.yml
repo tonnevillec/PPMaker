@@ -1,0 +1,4 @@
+services:
+#    ppmcv.example:
+#        class: PPM\CVBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

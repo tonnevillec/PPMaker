@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new PPMaker\BackBundle\PPMakerBackBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new PPMaker\UserBundle\PPMakerUserBundle(),
+            new PPM\CVBundle\PPMCVBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

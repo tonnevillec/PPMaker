@@ -3,10 +3,18 @@ administration: administration
 propulsed_by: propulsé par
 
 welcome: bonjour
-dashboard: tableau de bord
-parameters: paramètres
 sections: sections
 logout: déconnexion
+
+nav:
+    dashboard: tableau de bord
+    parameters: paramètres
+    cv: cv
+    portfolio: portfolio
+    social: social
+    contact: contact
+    support: support
+    projects: projets
 
 section:
     follow_me: Suivez moi

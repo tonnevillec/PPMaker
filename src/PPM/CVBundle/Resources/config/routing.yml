@@ -1,0 +1,3 @@
+ppmcv_homepage:
+    path:     /
+    defaults: { _controller: PPMCVBundle:Default:index }

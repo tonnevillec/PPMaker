@@ -3,17 +3,17 @@
         <ul class="nav" id="main-menu">
             <li class="{% if app.request.attributes.get('_route') == 'back_admin' %}active-link{% endif %}">
                 <a href="{{ path('back_home') }}">
-                    <i class="fa fa-qrcode "></i> {{ 'dashboard'|trans|capitalize }}
+                    <i class="fa fa-qrcode "></i> {{ 'nav.dashboard'|trans|capitalize }}
                 </a>
             </li>
             <li class="{% if app.request.attributes.get('_route') == 'back_parameters' %}active-link{% endif %}">
                 <a href="{{ path('back_parameters') }}">
-                    <i class="fa fa-table "></i> {{ 'parameters'|trans|capitalize }}
+                    <i class="fa fa-table "></i> {{ 'nav.parameters'|trans|capitalize }}
                 </a>
             </li>
-            <li class="{% if app.request.attributes.get('_route') == 'back_section' %}active-link{% endif %}">
+            <li class="{% if app.request.attributes.get('_route') == 'back_support' %}active-link{% endif %}">
                 <a href="blank.html">
-                    <i class="fa fa-edit "></i> {{ 'sections'|trans|capitalize }}
+                    <i class="fa fa-comments-o "></i> {{ 'nav.support'|trans|capitalize }}
                 </a>
             </li>
             <li>

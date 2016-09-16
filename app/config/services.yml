@@ -4,6 +4,9 @@ parameters:
 #    parameter_name: value
 
 services:
+    ppmaker_backbundle_config:
+        class: PPMaker\BackBundle\Form\ConfigType
+
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

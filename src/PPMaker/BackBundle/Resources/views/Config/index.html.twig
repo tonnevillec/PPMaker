@@ -1,0 +1,11 @@
+{% extends "PPMakerBackBundle::layout.html.twig" %}
+
+{% block body_content %}
+    {% for module in bundleList %}
+        {{ module.bundleName }}
+    {% endfor %}
+
+    <a class="btn btn-primary" href="{{ path('config_add') }}">
+        <i class="fa fa-plus"></i> Add config
+    </a>
+{% endblock %}

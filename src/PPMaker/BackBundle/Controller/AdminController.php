@@ -45,6 +45,15 @@ class AdminController extends Controller
     }
 
     /**
+     * @Route("/settings/{routeName}", name="back_settings")
+     * @Template("PPMakerBackBundle:Admin:module_setting.html.twig")
+     */
+    public function settingsAdminAction()
+    {
+        return ;
+    }
+
+    /**
      * @Route("/login", name="back_login")
      * @Template("PPMakerBackBundle:Admin:login.html.twig")
      */
