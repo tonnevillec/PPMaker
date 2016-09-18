@@ -34,7 +34,7 @@ class ConfigController extends Controller
     public function addAction(Request $request)
     {
         $config = new Config();
-        $form   = $this->createForm(ConfigType::class, $config);
+        $form   = $this->createForm(new ConfigType(), $config);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();

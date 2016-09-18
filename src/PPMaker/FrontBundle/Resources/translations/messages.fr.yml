@@ -29,6 +29,9 @@ btn:
     login: connexion
     close: fermer
     cancel: annuler
+    save: enregistrer
+    back: retour
+    add: ajouter
 
 contact:
     name: nom
@@ -41,3 +44,19 @@ login:
     email: adresse mail
     rememberMe: se souvenir de moi
     forgotPassword: mot de passe oublié?
+
+config:
+    add:
+        title: nouveau module
+    list:
+        title: Liste des modules
+
+bundle:
+    name: nom
+    icon: icon
+    navOrder: ordre
+    front: route frontal
+    back: route administration
+    actif: actif
+    error:
+        no_data: Aucun module trouvé
