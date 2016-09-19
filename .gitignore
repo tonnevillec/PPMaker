@@ -18,6 +18,8 @@
 # Parameters
 /app/config/parameters.yml
 /app/config/parameters.ini
+/app/check.php
+/app/SymfonyRequirements.php
 
 # Managed by Composer
 /app/bootstrap.php.cache
@@ -26,12 +28,14 @@
 !bin/console
 !bin/symfony_requirements
 /vendor/
+composer.lock
 
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
 /web/js
 /web/css
+/web/config.php
 
 # Assets managed by Bower
 /web/assets/vendor/

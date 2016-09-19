@@ -50,4 +50,32 @@ class ConfigController extends Controller
             'form' => $form->createView(),
         ));
     }
+
+    /**
+     * @Route("/config/edit/{id}", name="config_edit")
+     */
+    public function editAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $config = $em->getRepository('PPMakerBackBundle:Config')->find($id);
+
+        if($config === null){
+            throw new NotFoundHttpException("Paramètre de configuration inexistant");
+        }
+
+        $form   = $this->createForm(new ConfigType(), $config);
+
+        if ($form->handleRequest($request)->isValid()) {
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('notice', 'Module bien enregistré.');
+
+            return $this->redirectToRoute('config_list');
+        }
+
+        return $this->render('PPMakerBackBundle:Config:edit.html.twig', array(
+            'form' => $form->createView(),
+            'config' => $config
+        ));
+    }
 }

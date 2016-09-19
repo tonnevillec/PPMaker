@@ -1,0 +1,64 @@
+<div class="form-group">
+    <label for="ppmaker_backbundle_config_bundleName"
+           class="col-sm-3 required">{{ 'bundle.name'|trans|capitalize }}</label>
+    <div class="col-sm-9">
+        <input type="text" id="ppmaker_backbundle_config_bundleName" class="form-control"
+               name="ppmaker_backbundle_config[bundleName]" required="required"
+               value="{{ config.bundleName is defined ? config.bundleName }}">
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="ppmaker_backbundle_config_bundleIcon"
+           class="col-sm-3 required">{{ 'bundle.icon'|trans|capitalize }}</label>
+    <div class="col-sm-9">
+        <input type="text" id="ppmaker_backbundle_config_bundleIcon" class="form-control"
+               name="ppmaker_backbundle_config[bundleIcon]" required="required"
+               value="{{ config.bundleName is defined ? config.bundleIcon }}">
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="ppmaker_backbundle_config_bundleFront"
+           class="col-sm-3 required">{{ 'bundle.front'|trans|capitalize }}</label>
+    <div class="col-sm-9">
+        <input type="text" id="ppmaker_backbundle_config_bundleFront" class="form-control"
+               name="ppmaker_backbundle_config[bundleFront]" required="required"
+               value="{{ config.bundleName is defined ? config.bundleFront }}">
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="ppmaker_backbundle_config_bundleBack"
+           class="col-sm-3 required">{{ 'bundle.back'|trans|capitalize }}</label>
+    <div class="col-sm-9">
+        <input type="text" id="ppmaker_backbundle_config_bundleBack" class="form-control"
+               name="ppmaker_backbundle_config[bundleBack]" required="required"
+               value="{{ config.bundleName is defined ? config.bundleBack }}">
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="ppmaker_backbundle_config_bundleNavOrder"
+           class="col-sm-3 required">{{ 'bundle.navOrder'|trans|capitalize }}</label>
+    <div class="col-sm-9">
+        <input type="text" id="ppmaker_backbundle_config_bundleNavOrder" class="form-control"
+               name="ppmaker_backbundle_config[bundleNavOrder]" required="required"
+               value="{{ config.bundleName is defined ? config.bundleNavOrder }}">
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+        <div class="checkbox">
+            <label for="ppmaker_backbundle_config_bundleActif" class="required">
+                <input type="checkbox" id="ppmaker_backbundle_config_bundleActif"
+                       name="ppmaker_backbundle_config[bundleActif]"
+                       value="{{ config.bundleActif is defined ? 1 : 0 }}"
+                        {{ config.bundleActif is defined ? 'checked="checked"' }}> {{ 'bundle.actif'|trans|capitalize }}
+            </label>
+        </div>
+    </div>
+</div>
+
+{{ form_widget(form._token) }}

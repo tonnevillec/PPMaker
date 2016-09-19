@@ -29,7 +29,11 @@
                 <tr>
                     <td>{{ module.bundleActif }}</td>
                     <td>{{ module.bundleNavOrder }}</td>
-                    <td><i class="fa fa-{{ module.bundleIcon }}"></i> {{ module.bundleName }}</td>
+                    <td>
+                        <a href="{{ path('config_edit', {'id' : module.id}) }}">
+                        <i class="fa fa-{{ module.bundleIcon }}"></i> {{ module.bundleName }}
+                        </a>
+                    </td>
                     <td>{{ module.bundleFront }}</td>
                     <td>{{ module.bundleBack }}</td>
                 </tr>
