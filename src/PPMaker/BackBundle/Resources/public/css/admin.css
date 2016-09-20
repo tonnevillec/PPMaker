@@ -300,3 +300,10 @@ body.login .forgot-password:active,
 body.login .forgot-password:focus{
     color: rgb(12, 97, 33);
 }
+
+/*==============================================
+    TABLE
+=============================================*/
+.table-hover{
+    cursor: pointer;
+}

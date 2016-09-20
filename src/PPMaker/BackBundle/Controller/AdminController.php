@@ -7,6 +7,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
+use PPMaker\BackBundle\Entity\Config;
+
 class AdminController extends Controller
 {
     /**
@@ -24,13 +26,18 @@ class AdminController extends Controller
 
     /**
      * @Route("/home", name="back_admin")
-     * @Template("PPMakerBackBundle:Admin:admin.html.twig")
      */
     public function indexAdminAction()
     {
-        // A ajouter avant pubf
-        //* @Security("has_role('ROLE_ADMIN')")
-        return ;
+        $bundleList = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('PPMakerBackBundle:Config')
+            ->findAll()
+        ;
+
+        return $this->render('PPMakerBackBundle:Admin:admin.html.twig', array(
+            'bundleList' => $bundleList,
+        ));
     }
 
     /**

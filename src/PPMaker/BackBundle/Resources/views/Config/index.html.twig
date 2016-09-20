@@ -11,7 +11,7 @@
         </h1>
     </div>
 
-    <table class="table table-bordered table-responsive">
+    <table class="table table-bordered table-responsive table-hover">
         <thead>
         <tr>
             <th>{{ 'bundle.actif'|trans|capitalize }}</th>
@@ -26,13 +26,13 @@
             <tr><td colspan="5">{{ 'bundle.error.no_data'|trans|capitalize }}</td></tr>
         {% else %}
             {% for module in bundleList %}
-                <tr>
-                    <td>{{ module.bundleActif }}</td>
+                <tr onclick="location.href='{{ path('config_edit', {'id' : module.id}) }}'">
+                    <td><i class="fa fa-toggle-{{ module.bundleActif ? 'on' : 'off' }}"></i></td>
                     <td>{{ module.bundleNavOrder }}</td>
                     <td>
-                        <a href="{{ path('config_edit', {'id' : module.id}) }}">
+                        {#<a href="{{ path('config_edit', {'id' : module.id}) }}">#}
                         <i class="fa fa-{{ module.bundleIcon }}"></i> {{ module.bundleName }}
-                        </a>
+                        {#</a>#}
                     </td>
                     <td>{{ module.bundleFront }}</td>
                     <td>{{ module.bundleBack }}</td>

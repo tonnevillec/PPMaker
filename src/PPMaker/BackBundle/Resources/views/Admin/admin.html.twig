@@ -17,50 +17,16 @@
 </div>
 
 <div class="row text-center pad-top">
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-        <div class="div-square">
-            <a href="{{ path('back_settings', {'routeName': 'ppmcv_homepage'}) }}">
-                <i class="fa fa-graduation-cap fa-5x"></i>
-                <h4>{{ 'nav.cv'|trans|capitalize }}</h4>
-            </a>
+    {% for module in bundleList %}
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="{{ path('back_settings', {'routeName': module.bundleBack}) }}">
+                    <i class="fa fa-{{ module.bundleIcon }} fa-5x"></i>
+                    <h4>{{ module.bundleName }}</h4>
+                </a>
+            </div>
         </div>
-    </div>
-
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-        <div class="div-square">
-            <a href="blank.html">
-                <i class="fa fa-th fa-5x"></i>
-                <h4>{{ 'nav.portfolio'|trans|capitalize }}</h4>
-            </a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-        <div class="div-square">
-            <a href="blank.html">
-                <i class="fa fa-cubes fa-5x"></i>
-                <h4>{{ 'nav.projects'|trans|capitalize }}</h4>
-            </a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-        <div class="div-square">
-            <a href="blank.html">
-                <i class="fa fa-feed fa-5x"></i>
-                <h4>{{ 'nav.social'|trans|capitalize }}</h4>
-            </a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-        <div class="div-square">
-            <a href="blank.html">
-                <i class="fa fa-envelope fa-5x"></i>
-                <h4>{{ 'nav.contact'|trans|capitalize }}</h4>
-            </a>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
