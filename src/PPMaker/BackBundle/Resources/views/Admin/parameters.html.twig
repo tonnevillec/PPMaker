@@ -1,5 +1,7 @@
 {% extends "PPMakerBackBundle::layout.html.twig" %}
 
 {% block body_content %}
-    <a href="{{ path('config_list') }}">Config</a>
+    <ul class="list-group">
+        <a class="list-group-item" href="{{ path('config_list') }}"><i class="fa fa-gears"></i> {{ 'config.list.title'|trans|capitalize }}</a>
+    </ul>
 {% endblock %}
